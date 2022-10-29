@@ -28,11 +28,13 @@ window.plugin.debughooks = function() {};
 
 //--------------------------SCRIPT BEGIN
 
-window.pulgin.debugdooks.logging = function() {
-   console.log(arguments)
+window.plugin.debughooks.logging = function() {
+   console.log(arguments);
+   console.log(arguments.callee);
 }
 
 window.plugin.debughooks.main = function() {
+    /*
     //https://github.com/IITC-CE/ingress-intel-total-conversion/blob/master/core/code/hooks.js
     addHook('portalSelected', window.plugin.debughooks.logging);
 // portalSelected: called when portal on map is selected/unselected.
@@ -90,7 +92,9 @@ window.plugin.debughooks.main = function() {
 //              {success: boolean} indicated the request success or fail.
     addHook('iitcLoaded', window.plugin.debughooks.logging);
 // iitcLoaded: called after IITC and all plugins loaded
+*/
     addHook('portalDetailLoaded', window.plugin.debughooks.logging);
+/*
 // portalDetailLoaded: called when a request to load full portal detail
 //              completes. guid, success, details parameters
     addHook('paneChanged', window.plugin.debughooks.logging);
@@ -107,6 +111,7 @@ window.plugin.debughooks.main = function() {
 // geoSearch:
     addHook('search', window.plugin.debughooks.logging);
 // search:
+*/
 }
 
 var setup = function () {
