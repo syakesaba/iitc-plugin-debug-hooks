@@ -30,21 +30,19 @@ window.plugin.debughooks = function() {};
 
 window.plugin.debughooks.logging = function() {
    console.log(arguments);
-   console.log(arguments.callee);
 }
 
 window.plugin.debughooks.main = function() {
-    /*
-    //https://github.com/IITC-CE/ingress-intel-total-conversion/blob/master/core/code/hooks.js
-    addHook('portalSelected', window.plugin.debughooks.logging);
+//    //https://github.com/IITC-CE/ingress-intel-total-conversion/blob/master/core/code/hooks.js
+//    addHook('portalSelected', window.plugin.debughooks.logging);
 // portalSelected: called when portal on map is selected/unselected.
 //              Provide guid of selected and unselected portal.
-    addHook('mapDataRefreshStart', window.plugin.debughooks.logging);
+//    addHook('mapDataRefreshStart', window.plugin.debughooks.logging);
 // mapDataRefreshStart: called when we start refreshing map data
-    addHook('mapDataEntityInject', window.plugin.debughooks.logging);
+//    addHook('mapDataEntityInject', window.plugin.debughooks.logging);
 // mapDataEntityInject: called just as we start to render data. has callback to
 //                      Sinject cached entities into the map render
-    addHook('mapDataRefreshEnd', window.plugin.debughooks.logging);
+//    addHook('mapDataRefreshEnd', window.plugin.debughooks.logging);
 // mapDataRefreshEnd: called when we complete the map data load
     addHook('portalAdded', window.plugin.debughooks.logging);
 // portalAdded: called when a portal has been received and is about to
@@ -54,33 +52,33 @@ window.plugin.debughooks.main = function() {
 //              shown at all. Injection point is in
 //              code/map_data.js#renderPortal near the end. Will hand
 //              the Leaflet CircleMarker for the portal in "portal" var.
-    addHook('linkAdded', window.plugin.debughooks.logging);
+//    addHook('linkAdded', window.plugin.debughooks.logging);
 // linkAdded:   called when a link is about to be added to the map
-    addHook('fieldAdded', window.plugin.debughooks.logging);
+//    addHook('fieldAdded', window.plugin.debughooks.logging);
 // fieldAdded:  called when a field is about to be added to the map
-    addHook('portalRemoved', window.plugin.debughooks.logging);
+//    addHook('portalRemoved', window.plugin.debughooks.logging);
 // portalRemoved: called when a portal has been removed
-    addHook('linkRemoved', window.plugin.debughooks.logging);
+//    addHook('linkRemoved', window.plugin.debughooks.logging);
 // linkRemoved: called when a link has been removed
-    addHook('fieldRemoved', window.plugin.debughooks.logging);
+//    addHook('fieldRemoved', window.plugin.debughooks.logging);
 // fieldRemoved: called when a field has been removed
-    addHook('portalDetailsUpdated', window.plugin.debughooks.logging);
+//    addHook('portalDetailsUpdated', window.plugin.debughooks.logging);
 // portalDetailsUpdated: fired after the details in the sidebar have
 //              been (re-)rendered Provides data about the portal that
 //              has been selected.
-    addHook('publicChatDataAvailable', window.plugin.debughooks.logging);
+//    addHook('publicChatDataAvailable', window.plugin.debughooks.logging);
 // publicChatDataAvailable: this hook runs after data for any of the
 //              public chats has been received and processed, but not
 //              yet been displayed. The data hash contains both the un-
 //              processed raw ajax response as well as the processed
 //              chat data that is going to be used for display.
-    addHook('factionChatDataAvailable', window.plugin.debughooks.logging);
+//    addHook('factionChatDataAvailable', window.plugin.debughooks.logging);
 // factionChatDataAvailable: this hook runs after data for the faction
 //              chat has been received and processed, but not yet been
 //              displayed. The data hash contains both the unprocessed
 //              raw ajax response as well as the processed chat data
 //              that is going to be used for display.
-    addHook('alertsChatDataAvailable', window.plugin.debughooks.logging);
+//    addHook('alertsChatDataAvailable', window.plugin.debughooks.logging);
 // alertsChatDataAvailable: this hook runs after data for the alerts
 //              chat has been received and processed, but not yet been
 //              displayed. The data hash contains both the unprocessed
@@ -90,28 +88,25 @@ window.plugin.debughooks.main = function() {
 // requestFinished: DEPRECATED: best to use mapDataRefreshEnd instead
 //              called after each map data request finished. Argument is
 //              {success: boolean} indicated the request success or fail.
-    addHook('iitcLoaded', window.plugin.debughooks.logging);
+//    addHook('iitcLoaded', window.plugin.debughooks.logging);
 // iitcLoaded: called after IITC and all plugins loaded
-*/
-    addHook('portalDetailLoaded', window.plugin.debughooks.logging);
-/*
+//    addHook('portalDetailLoaded', window.plugin.debughooks.logging);
 // portalDetailLoaded: called when a request to load full portal detail
 //              completes. guid, success, details parameters
-    addHook('paneChanged', window.plugin.debughooks.logging);
+//    addHook('paneChanged', window.plugin.debughooks.logging);
 // paneChanged  called when the current pane has changed. On desktop,
 //              this only selects the current chat pane; on mobile, it
 //              also switches between map, info and other panes defined
 //              by plugins
-    addHook('artifactsUpdated', window.plugin.debughooks.logging);
+//    addHook('artifactsUpdated', window.plugin.debughooks.logging);
 // artifactsUpdated: called when the set of artifacts (including targets)
 //              has changed. Parameters names are old, new.
-    addHook('nicknameClicked', window.plugin.debughooks.logging);
+//    addHook('nicknameClicked', window.plugin.debughooks.logging);
 // nicknameClicked:
-    addHook('geoSearch', window.plugin.debughooks.logging);
+//    addHook('geoSearch', window.plugin.debughooks.logging);
 // geoSearch:
-    addHook('search', window.plugin.debughooks.logging);
+//    addHook('search', window.plugin.debughooks.logging);
 // search:
-*/
 }
 
 var setup = function () {
