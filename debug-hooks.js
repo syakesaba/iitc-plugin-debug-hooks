@@ -29,102 +29,106 @@ window.plugin.debughooks = function() {};
 //--------------------------SCRIPT BEGIN
 
 window.plugin.debughooks.portalSelected = function() {
-    console.log(arguments.callee.name);
+    console.log("portalSelected: arguments " + arguments.length);
 }
 
 window.plugin.debughooks.mapDataRefreshStart = function() {
-    console.log(arguments.callee.name);
+    console.log("mapDataRefreshStart: arguments " + arguments.length);
 }
 
 window.plugin.debughooks.mapDataEntityInject = function() {
-    console.log(arguments.callee.name);
+    console.log("mapDataEntityInject: arguments " + arguments.length);
 }
 
 window.plugin.debughooks.mapDataRefreshEnd = function() {
-    console.log(arguments.callee.name);
+    console.log("mapDataRefreshEnd: arguments " + arguments.length);
+}
+
+window.plugin.debughooks.portalAdded = function() {
+    console.log("portalAdded: arguments " + arguments.length);
 }
 
 window.plugin.debughooks.linkAdded = function() {
-    console.log(arguments.callee.name);
+    console.log("linkAdded: arguments " + arguments.length);
 }
 
 window.plugin.debughooks.fieldAdded = function() {
-    console.log(arguments.callee.name);
+    console.log("fieldAdded: arguments " + arguments.length);
 }
 
 window.plugin.debughooks.portalRemoved = function() {
-    console.log(arguments.callee.name);
+    console.log("portalRemoved: arguments " + arguments.length);
 }
 
 window.plugin.debughooks.linkRemoved = function() {
-    console.log(arguments.callee.name);
+    console.log("linkRemoved: arguments " + arguments.length);
 }
 
 window.plugin.debughooks.fieldRemoved = function() {
-    console.log(arguments.callee.name);
+    console.log("fieldRemoved: arguments " + arguments.length);
 }
 
 window.plugin.debughooks.portalDetailsUpdated = function() {
-    console.log(arguments.callee.name);
+    console.log("portalDetailsUpdated: arguments " + arguments.length);
 }
 
 window.plugin.debughooks.publicChatDataAvailable = function() {
-    console.log(arguments.callee.name);
+    console.log("publicChatDataAvailable: arguments " + arguments.length);
 }
 
 window.plugin.debughooks.factionChatDataAvailable = function() {
-    console.log(arguments.callee.name);
+    console.log("factionChatDataAvailable: arguments " + arguments.length);
 }
 
 window.plugin.debughooks.alertsChatDataAvailable = function() {
-    console.log(arguments.callee.name);
+    console.log("alertsChatDataAvailable: arguments " + arguments.length);
 }
 
 window.plugin.debughooks.requestFinished = function() {
-    console.log(arguments.callee.name);
+    console.log("requestFinished: arguments " + arguments.length);
 }
 
 window.plugin.debughooks.iitcLoaded = function() {
-    console.log(arguments.callee.name);
+    console.log("iitcLoaded: arguments " + arguments.length);
 }
 
 window.plugin.debughooks.portalDetailLoaded = function() {
-    console.log(arguments.callee.name);
+    console.log("portalDetailLoaded: arguments " + arguments.length);
 }
 
 window.plugin.debughooks.paneChanged = function() {
-    console.log(arguments.callee.name);
+    console.log("paneChanged: arguments " + arguments.length);
 }
 
 window.plugin.debughooks.artifactsUpdated = function() {
-    console.log(arguments.callee.name);
+    console.log("artifactsUpdated: arguments " + arguments.length);
 }
 
 window.plugin.debughooks.nicknameClicked = function() {
-    console.log(arguments.callee.name);
+    console.log("nicknameClicked: arguments " + arguments.length);
 }
 
 window.plugin.debughooks.geoSearch = function() {
-    console.log(arguments.callee.name);
+    console.log("geoSearch: arguments " + arguments.length);
 }
 
 window.plugin.debughooks.search = function() {
-    console.log(arguments.callee.name);
+    console.log("search: arguments " + arguments.length);
 }
 
 window.plugin.debughooks.main = function() {
-//    //https://github.com/IITC-CE/ingress-intel-total-conversion/blob/master/core/code/hooks.js
+//https://github.com/IITC-CE/ingress-intel-total-conversion/blob/master/core/code/hooks.js
     addHook('portalSelected', window.plugin.debughooks.portalSelected);
 // portalSelected: called when portal on map is selected/unselected.
 //              Provide guid of selected and unselected portal.
-    addHook('mapDataRefreshStart', window.plugin.debughooks.mapDataRefreshStart);
+//    addHook('mapDataRefreshStart', window.plugin.debughooks.mapDataRefreshStart);
 // mapDataRefreshStart: called when we start refreshing map data
-    addHook('mapDataEntityInject', window.plugin.debughooks.mapDataEntityInject);
+//    addHook('mapDataEntityInject', window.plugin.debughooks.mapDataEntityInject);
 // mapDataEntityInject: called just as we start to render data. has callback to
 //                      Sinject cached entities into the map render
-    addHook('mapDataRefreshEnd', window.plugin.debughooks.mapDataRefreshEnd);
+//    addHook('mapDataRefreshEnd', window.plugin.debughooks.mapDataRefreshEnd);
 // mapDataRefreshEnd: called when we complete the map data load
-    addHook('portalAdded', window.plugin.debughooks.portalAdded);
+//    addHook('portalAdded', window.plugin.debughooks.portalAdded);
 // portalAdded: called when a portal has been received and is about to
 //              be added to its layer group. Note that this does NOT
 //              mean it is already visible or will be, shortly after.
@@ -132,15 +136,15 @@ window.plugin.debughooks.main = function() {
 //              shown at all. Injection point is in
 //              code/map_data.js#renderPortal near the end. Will hand
 //              the Leaflet CircleMarker for the portal in "portal" var.
-    addHook('linkAdded', window.plugin.debughooks.linkAdded);
+//    addHook('linkAdded', window.plugin.debughooks.linkAdded);
 // linkAdded:   called when a link is about to be added to the map
-    addHook('fieldAdded', window.plugin.debughooks.fieldAdded);
+//    addHook('fieldAdded', window.plugin.debughooks.fieldAdded);
 // fieldAdded:  called when a field is about to be added to the map
-    addHook('portalRemoved', window.plugin.debughooks.portalRemoved);
+//    addHook('portalRemoved', window.plugin.debughooks.portalRemoved);
 // portalRemoved: called when a portal has been removed
-    addHook('linkRemoved', window.plugin.debughooks.linkRemoved);
+//    addHook('linkRemoved', window.plugin.debughooks.linkRemoved);
 // linkRemoved: called when a link has been removed
-    addHook('fieldRemoved', window.plugin.debughooks.fieldRemoved);
+//    addHook('fieldRemoved', window.plugin.debughooks.fieldRemoved);
 // fieldRemoved: called when a field has been removed
     addHook('portalDetailsUpdated', window.plugin.debughooks.portalDetailsUpdated);
 // portalDetailsUpdated: fired after the details in the sidebar have
@@ -164,7 +168,7 @@ window.plugin.debughooks.main = function() {
 //              displayed. The data hash contains both the unprocessed
 //              raw ajax response as well as the processed chat data
 //              that is going to be used for display.
-    addHook('requestFinished', window.plugin.debughooks.requestFinished);
+//    addHook('requestFinished', window.plugin.debughooks.requestFinished);
 // requestFinished: DEPRECATED: best to use mapDataRefreshEnd instead
 //              called after each map data request finished. Argument is
 //              {success: boolean} indicated the request success or fail.
@@ -178,7 +182,7 @@ window.plugin.debughooks.main = function() {
 //              this only selects the current chat pane; on mobile, it
 //              also switches between map, info and other panes defined
 //              by plugins
-    addHook('artifactsUpdated', window.plugin.debughooks.artifactsUpdated);
+//    addHook('artifactsUpdated', window.plugin.debughooks.artifactsUpdated);
 // artifactsUpdated: called when the set of artifacts (including targets)
 //              has changed. Parameters names are old, new.
     addHook('nicknameClicked', window.plugin.debughooks.nicknameClicked);
@@ -190,7 +194,7 @@ window.plugin.debughooks.main = function() {
 }
 
 var setup = function () {
-  window.plugin.debughooks.main();
+    window.plugin.debughooks.main();
 }
 
 //---------------------------SCRIPT END
